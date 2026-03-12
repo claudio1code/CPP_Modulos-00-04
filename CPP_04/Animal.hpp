@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 11:27:05 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 11:44:33 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/12 14:59:30 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,14 @@ class Animal{
 	protected:
 		std::string _type;
 	public:
-		~Animal();
 		Animal();
+		virtual ~Animal();
 		Animal(const Animal& other);
 		Animal&	operator=(const Animal& other);
+		Animal(std::string name);
+
+		std::string getType() const;
+		virtual void makeSound() const;
 };
 
 #endif

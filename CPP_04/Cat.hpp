@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 11:32:01 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 11:34:15 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/12 15:11:42 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 #define CAT_HPP
 
 #include <iostream>
+#include "Animal.hpp"
 
-class Cat{
+class Cat : public Animal{
 	private:
 
 	public:
@@ -23,6 +24,9 @@ class Cat{
 		Cat();
 		Cat(const Cat& other);
 		Cat&	operator=(const Cat& other);
+		virtual	void makeSound() const;
+		Cat(std::string name);
+
 };
 
 #endif
