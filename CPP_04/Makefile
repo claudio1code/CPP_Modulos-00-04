@@ -6,11 +6,11 @@ RESET = \033[0;39m
 
 NAME = animal
 
-CC = cpp
+CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS = Animal.cpp Dog.cpp Cat.cpp main.cpp
-OBJS_DIR = /objs
+SRCS = Animal.cpp Dog.cpp Cat.cpp main.cpp WrongAnimal.cpp WrongCat.cpp
+OBJS_DIR = objs/
 OBJS =  $(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o))
 
 all: $(NAME)
@@ -25,7 +25,7 @@ $(OBJS_DIR)%.o:%.cpp
 	@$(CC) $(FLAGS) -c $< -o $@
 	@printf "\b$(GREEN)OK!$(RESET)\n"
 clean:
-	@rm -f $(OBJS_DIR)
+	@rm -rf $(OBJS_DIR)
 	@printf "$(RED)Objects cleaned...$(RESET)\n"
 
 fclean: clean
