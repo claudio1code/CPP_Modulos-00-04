@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 16:24:27 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 16:44:32 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/12 16:56:57 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Brain{
 		Brain(std::string name);
 
 		std::string getIdea(int idx) const;
-		void		setIdea(const std::string, int idx);
+		void		setIdea(const std::string idea, int idx);
 };
 
 #endif

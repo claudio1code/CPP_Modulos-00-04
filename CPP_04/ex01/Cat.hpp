@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 11:32:01 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 16:39:44 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/12 16:54:32 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ class Cat : public Animal{
 		Cat();
 		Cat(const Cat& other);
 		Cat&	operator=(const Cat& other);
-		virtual	void makeSound() const;
 		Cat(std::string name);
+		
+		virtual	void makeSound() const;
+		Brain&	getBrain();
 
 };
 

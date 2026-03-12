@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 11:32:04 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 16:40:25 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/12 16:55:29 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ class Dog : public Animal{
 		Dog();
 		Dog(const Dog& other);
 		Dog&	operator=(const Dog& other);
-		virtual void makeSound() const;
 		Dog(std::string name);
+		
+		virtual void makeSound() const;
+		Brain&	getBrain();
 };
 
 #endif
