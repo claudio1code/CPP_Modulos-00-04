@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 11:32:01 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 16:39:44 by clados-s         ###   ########.fr       */
+/*   Created: 2026/03/12 16:24:27 by clados-s          #+#    #+#             */
+/*   Updated: 2026/03/12 16:44:32 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
 #include <iostream>
-#include "Animal.hpp"
-#include "Brain.hpp"
 
-class Cat : public Animal{
-	private:
-		Brain *brain;
+class Brain{
+	protected:
+		std::string ideas[100];
 	public:
-		~Cat();
-		Cat();
-		Cat(const Cat& other);
-		Cat&	operator=(const Cat& other);
-		virtual	void makeSound() const;
-		Cat(std::string name);
+		Brain();
+		virtual ~Brain();
+		Brain(const Brain& other);
+		Brain&	operator=(const Brain& other);
+		Brain(std::string name);
 
+		std::string getIdea(int idx) const;
+		void		setIdea(const std::string, int idx);
 };
 
 #endif

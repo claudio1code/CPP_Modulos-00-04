@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 11:32:04 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 15:00:07 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/12 16:40:25 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal{
 	private:
-		
+		Brain	*brain;
 	public:
 		~Dog();
 		Dog();
