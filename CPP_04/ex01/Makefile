@@ -4,7 +4,7 @@ BLUE = \033[0;96m
 RED = \033[1;31m
 RESET = \033[0;39m
 
-NAME = animal
+NAME = brain
 
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98

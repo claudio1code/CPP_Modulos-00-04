@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 16:26:03 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 17:28:03 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/12 17:30:08 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ Brain&	Brain::operator=(const Brain& other) {
 	std::cout << "Operator copy (Brain) called ---" << std::endl;
 	if (this != &other)
 	{
-		delete [] this->ideas;
 		for (int i = 0; i < 100; i++)
 			this->ideas[i] = other.ideas[i];
 	}

@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 14:45:51 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 17:26:07 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/12 17:37:19 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@
 
 int main()
 {
-	const int size = 4;
+	const int size = 5;
 	Animal* animals[size];
 	
+	std::cout << std::endl << "--constructor--" << std::endl;
 	for (int i = 0; i < size / 2; i++)
 		animals[i] = new Dog();
 	for (int i = size / 2; i < size; i++)
@@ -39,7 +40,8 @@ int main()
 			cat->getBrain().setIdea("Me sirva", 1);
 		}
 	}
-
+	
+	std::cout << std::endl << "--Ideia and Sound--" << std::endl;
 	for (int i = 0; i < size; i++)
 	{
 		std::cout << animals[i]->getType() << ", ";
