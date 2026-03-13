@@ -6,14 +6,14 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 11:40:21 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 15:44:07 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/13 15:43:27 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::~Animal() {
-	std::cout << "Destructor (Animal) Called for" << std::endl;
+	std::cout << "Destructor (Animal) Called" << std::endl;
 }
 
 Animal::Animal() : _type("ANIMAL") {

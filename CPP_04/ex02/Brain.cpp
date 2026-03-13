@@ -6,14 +6,14 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 16:26:03 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 17:30:08 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/13 15:43:39 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
 Brain::~Brain() {
-	std::cout << "Destructor (Brain) Called for" << std::endl;
+	std::cout << "Destructor (Brain) Called" << std::endl;
 }
 
 Brain::Brain() : ideas() {

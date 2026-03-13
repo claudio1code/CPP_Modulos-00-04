@@ -6,31 +6,33 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 11:54:44 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/12 17:18:04 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/13 15:42:59 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::~Dog() {
-	std::cout << "Destructor (Dog) Called for" << std::endl;
+	std::cout << "Destructor (Dog) Called " << std::endl;
 	delete this->brain;
 }
 
 Dog::Dog() : Animal() {
-	std::cout << "Constructor (Dog) called ---" << std::endl;
+	std::cout << "Constructor (Dog) Called ---" << std::endl;
 	this->_type = "Dog";
 	this->brain = new Brain;
+	for (int i = 0; i < Brain::_number_of_ideas; i++)
+		this->brain->setIdea("quero latir", i);
 }
 
 Dog::Dog(const Dog& other) : Animal(other) {
-	std::cout << "Constructor copy (Dog) called ---" << std::endl;
+	std::cout << "Constructor copy (Dog) Called ---" << std::endl;
 	this->brain = new Brain;
 	*(this->brain) = *(other.brain);
 }
 
 Dog&	Dog::operator=(const Dog& other) {
-	std::cout << "Operator copy (Dog) called ---" << std::endl;
+	std::cout << "Operator copy (Dog) Called ---" << std::endl;
 	if (this != &other)
 	{
 		Animal::operator=(other);
